@@ -51,7 +51,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run -d -p 8186:8186 --name %CONTAINER_NAME% %IMAGE_NAME%'
+                bat 'docker run -d -p 8186:8186 --name %CONTAINER_NAME% %IMAGE_NAME%:%IMAGE_TAG%'
             }
         }
 
