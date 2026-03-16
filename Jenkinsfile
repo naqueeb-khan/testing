@@ -8,6 +8,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = "springboot-app"
+		IMAGE_TAG = "v1"
         CONTAINER_NAME = "springboot-container"
     }
 
@@ -36,7 +37,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
 				dir('demo') {
-                bat 'docker build -t %IMAGE_NAME% .'
+                bat 'docker build -t %IMAGE_NAME%:%IMAGE_TAG% .'
 				}
             }
         }
