@@ -6,4 +6,4 @@ COPY target/*.jar demo.jar
 # just documented but not bind port
 EXPOSE 8186
 # execute command in jocker container
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","demo.jar"]
